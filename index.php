@@ -34,6 +34,7 @@
 
     .heading {
       margin: 0 0 25px 0;
+      text-align: center;
     }
 
     .main {
@@ -83,9 +84,13 @@
     <h1 class="heading level1">Projekte: <?php echo $name ?></h1>
     <ol class="list">
       <?php 
+        $max = 9;
         foreach($hosts as $key=>$value) {
-          echo "<li><iframe src=\"http://" . $computer . ":" . $value . "\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
-        } 
+          if($max > 0) {
+            echo "<li><iframe src=\"http://" . $computer . ":" . $value . "\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
+          }
+          $max--;
+        }
       ?>
     </ol>
   </div>
