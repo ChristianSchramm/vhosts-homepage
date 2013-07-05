@@ -37,7 +37,7 @@
     }
 
     .main {
-      width: 890px;
+      width: 980px;
       margin: 0 auto;
       background: #eee;
       padding: 50px;
@@ -49,18 +49,14 @@
     }
 
     li {
-      margin-bottom: 10px;
+      
       position: relative;
       border: 1px solid #ccc;
       height: 230px;
       width: 250px;
       list-style: none;
       float: left;
-      margin: 0 0 0 25px;
-    }
-
-    li:first-child {
-      margin: 0;
+      margin: 25px;
     }
 
     a:link,
