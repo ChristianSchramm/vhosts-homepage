@@ -9,22 +9,18 @@
   <style>
 
     .iframe {
-      height: 768px;
-      width: 1024px;
-
-      position: absolute;
-      top: -260px;
-      left: -390px;
-
-      border: 1px solid #aaa;
-
-      overflow: hidden;
-
-      -webkit-transform: scale(0.24);
       -moz-transform: scale(0.24);
       -ms-transform: scale(0.24);
       -o-transform: scale(0.24);
+      -webkit-transform: scale(0.24);
+      border: 1px solid #aaa;
+      height: 768px;
+      left: -390px;
+      overflow: hidden;
+      position: absolute;
+      top: -250px;
       transform: scale(0.24);
+      width: 1024px;
     }
 
     body {
@@ -38,11 +34,11 @@
     }
 
     .main {
-      width: 980px;
-      margin: 0 auto;
       background: #eee;
-      padding: 50px;
       border: 1px solid #ccc;
+      margin: 0 auto;
+      padding: 50px;
+      width: 980px;
     }
 
     .list {
@@ -50,21 +46,22 @@
     }
 
     li {
-      
-      position: relative;
       border: 1px solid #ccc;
-      height: 230px;
-      width: 250px;
-      list-style: none;
       float: left;
+      height: 230px;
+      list-style: none;
       margin: 25px;
+      position: relative;
+      width: 250px;
     }
 
     a:link,
     a:visited {
-      padding: 5px;
-      display: inline-block;
       color: #333;
+      display: block;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
       text-decoration: none;
     }
 
