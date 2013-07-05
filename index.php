@@ -1,5 +1,8 @@
 <?php 
 
+// Dein Name
+$name = "Markus";
+
 // Computername
 $computer = "artdeco.hob";
 
@@ -14,31 +17,52 @@ $hosts = array(
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Markus' Projekte</title>
+  <title>Projekte <?php echo $name ?></title>
+  <style>
+
+    body {
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .main {
+      width: 500px;
+      margin: 0 auto;
+      background: #eee;
+      padding: 50px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a:link,
+    a:visited {
+      padding: 5px;
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
+      background: #fff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
-<style>
-
-  body {
-    background: #fff;
-    font-family: Arial, sans-serif;
-  }
-  .main {
-    width: 960px;
-    margin: 0 auto;
-  }
-</style>
 <body>
 
   <div class="main">
-    <h1 class="heading level1">Markus' Projekte</h1>
-    <ul class="list">
+    <h1 class="heading level1">Projekte <?php echo $name ?></h1>
+    <ol class="list">
       <?php 
         foreach($hosts as $key=>$value) {
           echo "<li><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
         } 
       ?>
-    </ul>
+    </ol>
   </div>
     
   </ul>
