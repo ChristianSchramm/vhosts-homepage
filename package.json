@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "author": "Markus Falk",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.3.0",
-    "grunt-contrib-watch": "~0.4.4"
+    "grunt": "~0.4.4",
+    "grunt-contrib-compass": "~0.7.1",
+    "grunt-contrib-watch": "~0.6.1"
   }
 }
