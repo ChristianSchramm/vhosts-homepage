@@ -22,6 +22,11 @@ module.exports = function(grunt) {
       html: {
         files: '**/*.html',
         tasks: [],
+      },
+
+      php: {
+        files: '**/*.php',
+        tasks: [],
       }
     },
 
