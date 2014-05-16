@@ -1,14 +1,18 @@
 <?php 
 
 // Dein Name
-$name = "";
+$name = "Markus";
 
 // Computername
-$computer = "";
+$computer = "artdeco";
 
 // Array mit Projektname und port
-$hosts = array(
-  "webiste" => "8034",
+$current_projects = array(
+  // "website1" => "8034",
+);
+
+$older_projects = array(
+  // "website2" => "8035",
 );
 
 ?>

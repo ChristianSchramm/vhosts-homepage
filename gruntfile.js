@@ -1,34 +1,84 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON( 'package.json' ),
 
     watch: {
-      all: {
-        files: '**/*.*',
-        tasks: ['compass'],
-        options: {
-          livereload: true
-        }
+      options: {
+        livereload: true,
+        spawn: false
+      },
+
+      scss: {
+        files: '**/*.scss',
+        tasks: ['compass:development']
+      },
+
+      js: {
+        files: '**/*.js',
+        tasks: [],
+      },
+
+      html: {
+        files: '**/*.html',
+        tasks: [],
+      },
+
+      php: {
+        files: '**/*.php',
+        tasks: [],
       }
     },
 
     compass: {
-      dist: {
+      options: {
+        // httpPath: "/",
+        banner: "/* <%= pkg.author %>, Version: <%= pkg.version %> */",
+        cssDir: 'assets/css',
+        imagesDir: 'assets/img',
+        noLineComments: false,
+        sassDir: 'assets/scss',
+        specify: "assets/scss/*.scss"
+      },
+      development: {
         options: {
-          config: 'config.rb'
+          environment: 'development'
+        }
+      },
+      production: {
+        options: {
+          environment: 'production'
         }
       }
-    }
+    },
+
+    // requirejs: {
+    //   development: {
+    //     options: {
+    //       baseUrl: "assets/js",
+    //       mainConfigFile: "assets/js/.js",
+    //       name: "",
+    //       optimize: 'none',
+    //       out: "build/.js"
+    //     }
+    //   },
+    //   production: {
+    //     options: {
+    //       baseUrl: "assets/js",
+    //       mainConfigFile: "assets/js/.js",
+    //       name: "",
+    //       out: "build/.js"
+    //     }
+    //   }
+    // }
 
   });
 
-  // load plugins
   grunt.loadNpmTasks('grunt-contrib-compass');
+  // grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // register tasks
-  grunt.registerTask('default', ['compass']);
+  grunt.registerTask('default', ['compass:development']);
+  grunt.registerTask('production', ['compass:production']);
 
 };
