@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <title>Projekte <?php echo $name ?></title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <meta name="viewport" content="width: device-width, initial-scale=1">
 </head>
 
 <body>
@@ -38,6 +39,21 @@
         <ol class="list-older">
           <?php  
             foreach($older_projects as $key=>$value) {
+              echo "<li><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
+            }
+          ?>
+        </ol>
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div class="inner">
+        <h2 class="heading style2">Interne Projekte</h2>
+        <ol class="list-older">
+          <?php  
+            foreach($internal_projects as $key=>$value) {
               echo "<li><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
             }
           ?>
