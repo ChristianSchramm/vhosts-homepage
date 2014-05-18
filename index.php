@@ -20,10 +20,10 @@
         <h1 class="heading style1">Aktuelle Projekte: <?php echo $name ?></h1>
         <ol class="list-current">
           <?php 
-            $max = 9;
+            $max = 3;
             foreach($current_projects as $key=>$value) {
               if($max > 0) {
-                echo "<li><iframe src=\"http://" . $computer . ":" . $value . "\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
+                echo "<li><iframe src=\"http://www.markus-falk.com\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
               }
               $max--;
             }
@@ -63,6 +63,9 @@
     </section>
 
   </main>
+
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vhosts.js"></script>
 
 </body>
 </html>
