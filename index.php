@@ -23,7 +23,7 @@
             $max = 3;
             foreach($current_projects as $key=>$value) {
               if($max > 0) {
-                echo "<li><iframe src=\"http://www.markus-falk.com\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
+                echo "<li><iframe src=\"http://" . $computer . ":" . $value . "\" class=\"iframe\"></iframe><a href=\"http://" . $computer . ":" . $value . "\">" . $key . "</a></li>";
               }
               $max--;
             }
