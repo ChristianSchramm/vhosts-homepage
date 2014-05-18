@@ -20,7 +20,7 @@ body {
 }
 /* line 18, ../scss/main.scss */
 .section:nth-child(2n+1) {
-  background-color: #ccc;
+  background-color: #efefef;
 }
 
 @media screen and (min-width: 1024px) {
@@ -176,34 +176,35 @@ body {
   font-weight: normal;
   margin: 0 0 25px 0;
   text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 187, ../scss/main.scss */
+  /* line 188, ../scss/main.scss */
   .heading {
     margin: 20px 0 10px 0;
   }
 }
-/* line 192, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 .style1 {
   font-size: 3em;
   color: #fff;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 198, ../scss/main.scss */
+  /* line 199, ../scss/main.scss */
   .style1 {
     font-size: 1.4em;
   }
 }
-/* line 203, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .style2 {
   font-size: 2em;
   color: #01567F;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 209, ../scss/main.scss */
+  /* line 210, ../scss/main.scss */
   .style2 {
     font-size: 1.4em;
   }
