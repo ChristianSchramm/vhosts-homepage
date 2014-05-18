@@ -12,14 +12,22 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.inner {
-  margin: 0 auto;
-  width: 980px;
+.section {
+  overflow: auto;
+
+  &:nth-child(2n+1) {
+    background-color: #ccc;
+  }
 }
 
-.section {
-  padding: 20px;
-  overflow: auto;
+@media screen and (min-width: 1024px) {
+  .inner {
+    margin: 0 auto;
+    width: 980px;
+  }
+  .section {
+    padding: 20px 20px 60px 20px;
+  }
 }
 
 .section-main {
@@ -55,6 +63,34 @@ body {
   padding: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .list-current {
+    li {
+      float: left;
+        &:active,
+        &:hover,
+        &:focus {
+          -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          -o-transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+    }
+  }
+
+  .list-older {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+
+    -moz-column-width: 250px;
+    -webkit-column-width: 250px;
+    column-width: 250px;
+  }
+}
+
+
 .list-current {
 
   li {
@@ -65,22 +101,12 @@ body {
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
     border: 5px solid #fff;
-    float: left;
     height: 230px;
     list-style: none;
     margin: 25px;
     position: relative;
     width: 250px;
 
-    &:active,
-    &:hover,
-    &:focus {
-      -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      -o-transform: scale(1.05);
-      -webkit-transform: scale(1.05);
-      transform: scale(1.05);
-    }
   }
 
   a:link,
@@ -103,15 +129,16 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .list-current {
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
 .list-older {
   
-  -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
- 
-    -moz-column-width: 250px;
-    -webkit-column-width: 250px;
-    column-width: 250px;
 
   li {
     display: block;
@@ -132,10 +159,34 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .list-older {
+    padding: 10px;
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      background-color: #eee;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      display: block;
+      padding: 10px;
+    }
+  }
+}
+
 .heading {
   font-weight: normal;
   margin: 0 0 25px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    margin: 20px 0 10px 0;
+  }
 }
 
 .style1 {
@@ -143,7 +194,19 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+  .style1 {
+    font-size: 1.4em;
+  }
+}
+
 .style2 {
   font-size: 2em;
   color: #01567F;
+}
+
+@media screen and (max-width: 1024px) {
+  .style2 {
+    font-size: 1.4em;
+  }
 }
