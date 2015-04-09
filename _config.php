@@ -1,10 +1,10 @@
 <?php 
 
 // Dein Name
-$name = "Markus";
+$name = "";
 
-// Computername ohne .hob
-$computer = "artdeco";
+// Computername
+$computer = "";
 
 // Array mit Projektname und port
 // maximal 3 Einträge werden angezeigt
